@@ -1,4 +1,4 @@
-# SOC-SIEM-Monitor Failed RDP to IP Geolocation Information
+# SOC/SIEM Monitoring (Creating a Honeypot)
 
 <h2>Description</h2>
 <br>The PowerShell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third-party API to collect geographic information about the attacker's location. 
