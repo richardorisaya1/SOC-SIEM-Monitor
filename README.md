@@ -1,14 +1,14 @@
 # SOC-SIEM-Monitor Failed RDP to IP Geolocation Information
 
 <h2>Description</h2>
-<b>The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
-</b>
+<br>The PowerShell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third-party API to collect geographic information about the attacker's location. 
+</br>
 
 <br />
 <br />
-The script is used in this demo where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot.
+The script is used in this demo, where I set up Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honeypot.
 We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to
-look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
+Look up the attackers' Geolocation information and plot it on an Azure Sentinel Map!
 <br />
 <br />
 
@@ -19,49 +19,42 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 
 <h2>Utilities Used</h2>
 
-- <b>azure Platform</b>
-- <b>Microsoft Sententil</b>
+- <b>Azure Platform</b>
+- <b>Microsoft Sentinel</b>
 - <b>Event Manager</b>
-- <b>Windows Defender Firewall with advanced Security</b>
+- <b>Windows Defender Firewall with Advanced Security</b>
 - <b>ipgeolocation.io:</b> IP Address to Geolocation API
 
 <h2>Environments Used </h2>
 
-- <b>Microsoft azure virtual machine</b>
+- <b>Microsoft Azure virtual machine</b>
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Creating users in Active Directory with PowerShell: <br/>
-<img src="https://imgur.com/VoYWw3C.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Turning the firewall off in all security settings to make the Virtual Machine enticing to the attacker:<br/> <br/>
+<img src="https://imgur.com/rObIlP4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Users have been created in Active Directory under the _Users Organizational Unit:  <br/>
-<img src="https://imgur.com/ghpMgJY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Looking into the Event Manager to identify the failed login attempts:<br/>  <br/>
+<img src="https://imgur.com/Hrp6523.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-
-
-<h2>Languages Used</h2>
-
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
-
-<h2>Utilities Used</h2>
-
-- <b>ipgeolocation.io:</b> IP Address to Geolocation API
-
-<h2>Attacks from China coming in; Custom logs being output with geodata</h2>
-
-<p align="center">
-<img src="https://i.imgur.com/LhDCRz4.jpeg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
-
-<h2>World map of incoming attacks after 24 hours (built custom logs including geodata)</h2>
-
-<p align="center">
-<img src="https://i.imgur.com/krRFrK5.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
-
+<br />
+<b>Creating a script to parse WindowsEvents:<br/>  <br/>
+<img src="https://imgur.com/3THFfmM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<b>Built customized log including geodata:<br/>  <br/>
+<img src="https://imgur.com/uI5HhIP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<b>World map of incoming attacks after 24 hours:<br/>  <br/>
+<img src="https://imgur.com/tqfWGgm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 
 <!--
  ```diff
