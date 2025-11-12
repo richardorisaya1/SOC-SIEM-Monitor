@@ -52,7 +52,7 @@ Look up the attackers' Geolocation information and plot it on an Azure Sentinel 
 <br />
 <br />
 <b>World map of incoming attacks after 24 hours:<br/>  <br/>
-<img src="https://imgur.com/tqfWGgm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/5ayACz3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
